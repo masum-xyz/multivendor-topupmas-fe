@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Starter Page | TopupMas - Agen Topup Game dan PPOB</title>
+    <title>Tambah Produk | TopupMas - Agen Topup Game dan PPOB</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
     <meta content="MyraStudio" name="author">
@@ -470,7 +470,7 @@
 
             <!-- Page Title Start -->
             <div class="flex items-center md:justify-between flex-wrap gap-2 mb-5">
-                <h4 class="text-default-900 text-lg font-medium">Tambah Vendor</h4>
+                <h4 class="text-default-900 text-lg font-medium">Tambah Produk</h4>
 
                 <div class="md:flex hidden items-center gap-3 text-sm font-semibold">
                     <a href="#" class="text-sm font-medium text-default-700">TopupMas</a>
@@ -481,7 +481,7 @@
 
                     <i class="i-tabler-chevron-right text-lg flex-shrink-0 text-default-500 rtl:rotate-180"></i>
 
-                    <a href="#" class="text-sm font-medium text-default-700" aria-current="page">Tambah Vendor</a>
+                    <a href="#" class="text-sm font-medium text-default-700" aria-current="page">Tambah Produk</a>
                 </div>
             </div>
             <!-- Page Title End -->
@@ -491,47 +491,56 @@
                 <div class="lg:col-span-2">
                     <div class="card">
                         <div class="p-6">
-                            <h4 class="card-title mb-4">Tambah Vendor</h4>
-                            <p class="text-sm text-default-700 mb-4">Masukan data Vendor integrasi TopupMas</p>
+                            <h4 class="card-title mb-4">Tambah Produk</h4>
+                            <p class="text-sm text-default-700 mb-4">Masukan data produk dan vendor TopupMas</p>
 
                             <form>
                                 <div class="grid grid-cols-1 md:grid-cols-2  gap-6">
                                     <div>
-                                        <label for="inputCodeProduct" class="text-default-800 text-sm font-medium inline-block mb-2">Kode Produk TopupMas</label>
-                                        <input type="number" class="form-input" oninput="cekNamaProduct()" id="inputCodeProduct" placeholder="code_product" required>
+                                        <label for="inputCodeProduct"
+                                               class="text-default-800 text-sm font-medium inline-block mb-2">Kode
+                                            Produk TopupMas
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="number" name="code_product" class="form-input"
+                                               oninput="cekNamaProduct()" id="inputCodeProduct"
+                                               placeholder="Kode Produk TopupMas" required>
                                     </div>
 
                                     <div>
-                                        <label for="inputNameProduct" class="text-default-800 text-sm font-medium inline-block mb-2">Nama Produk</label>
-                                        <input type="text" class="form-input" id="inputNameProduct" placeholder="Password" disabled>
+                                        <label for="inputNameProduct"
+                                               class="text-default-800 text-sm font-medium inline-block mb-2">Nama
+                                            Produk (Auto Input)</label>
+                                        <input type="text" name="name" class="form-input" id="inputNameProduct"
+                                               placeholder="Auto input nama" disabled>
                                     </div>
 
-                                    <div class="lg:col-span-2">
-                                        <label for="inputAddress" class="text-default-800 text-sm font-medium inline-block mb-2">Address</label>
-                                        <input type="text" class="form-input" id="inputAddress" placeholder="1234 Main St">
-                                    </div>
-
-                                    <div>
-                                        <label for="inputAddress2" class="text-default-800 text-sm font-medium inline-block mb-2">Address 2</label>
-                                        <input type="text" class="form-input" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                                    </div>
-
-                                    <div>
-                                        <label for="inputCity" class="text-default-800 text-sm font-medium inline-block mb-2">City</label>
-                                        <input type="text" class="form-input" id="inputCity">
-                                    </div>
-                                    <div>
-                                        <label for="inputState" class="text-default-800 text-sm font-medium inline-block mb-2">State</label>
-                                        <select id="inputState" class="form-select">
-                                            <option>Choose</option>
-                                            <option>Option 1</option>
-                                            <option>Option 2</option>
-                                            <option>Option 3</option>
+                                    <div class="">
+                                        <label for="inputVendorId"
+                                               class="text-default-800 text-sm font-medium inline-block mb-2">Vendor
+                                            <span class="text-danger">*</span></label>
+                                        <select id="inputVendorId" class="form-select" name="vendor_id" required>
+                                            <option>Pilih Vendor</option>
+                                            <option value="1">VS Gamers</option>
+                                            <option value="2">Digiflazz</option>
+                                            <option value="3">Oke Connect</option>
                                         </select>
                                     </div>
+
                                     <div>
-                                        <label for="inputZip" class="text-default-800 text-sm font-medium inline-block mb-2">Zip</label>
-                                        <input type="text" class="form-input" id="inputZip">
+                                        <label for="inputCodeProductVendor"
+                                               class="text-default-800 text-sm font-medium inline-block mb-2">Kode
+                                            Produk Vendor <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-input" id="inputCodeProductVendor"
+                                               placeholder="Masukan Kode Produk dari Vendor" required>
+                                    </div>
+
+                                    <div>
+                                        <label for="inputMargin"
+                                               class="text-default-800 text-sm font-medium inline-block mb-2">Margin
+                                            Keuntungan</label>
+                                        <input type="number" class="form-input" id="inputMargin" name="margin"
+                                               placeholder="Masukan Margin Keuntungan">
                                     </div>
                                 </div>
 
